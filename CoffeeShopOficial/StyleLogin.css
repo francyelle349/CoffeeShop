@@ -1,0 +1,159 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+:root{
+    --main-color: #f3c283;
+    --black: #13131a;
+    --bg: #010103;
+    --border: .1rem solid rgba(255,255,255,.3)
+
+    /* RGBA (o A é a opacidade da cor, ou seja, é declarado de 0 a 1) */
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    margin: 0;
+}html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    /* o x cria a barra de rolagem na vertical, o y na horizontal.
+    problema: quando o conteudo de uma div ultrapassa o tamanho do bloco do elemento. 
+    Esta função permite que eu corte o conteudo, renderize uma barra de rolagem ou exiba o conteudo*/
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
+
+.main-Login{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background:var(--black);
+    flex-wrap: wrap;
+    gap:1rem;
+    flex-direction: column;
+}
+
+.left-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.left-login h1{
+    font-size: xx-large;
+    color: #fff;
+}
+
+.right-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-login  label{
+    color:#fff;
+    font-weight: lighter;
+    margin: 0;
+    font-size: medium;
+}
+.card-login h1{
+    font-size: 3rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    color:#fff;
+    padding:.7rem 0;
+    text-transform:uppercase;
+}
+.card-login{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    border: var(--border);
+    
+    box-shadow: 0px 10px 40px var(--bg);
+}
+
+.text-field{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:center;
+    margin: 10px 0px;
+}
+.left-login-img{
+    width: 60%;
+}
+.main-login{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+   
+
+.text-field > input{
+    width: 100%;
+    border: none;
+    
+    padding: 15px;
+    background-color: var(--bg);
+    color: #ffe7c8;
+  
+    outline: none;
+    box-sizing: border-box;
+}
+.text-field > label{
+    color: #fff;
+    margin-bottom: 10px;
+}
+ .text-field > input::placeholder{
+    color: #fff; 
+ }
+
+ 
+ .btn-login{
+    margin-top: 10px; 
+    display: inline-block;
+    padding: 7px 30px;
+    font-size: 1.7rem;
+    color:#fff;
+    background: var(--main-color);
+    cursor: pointer;
+ }
+ .btn-login:hover{
+     letter-spacing: .2rem;
+     
+ }
+ @media (max-width: 991px) {
+    .left-login-img{
+        width: 70%;
+    }
+
+    .left-login h1{
+        font-size: large;
+        color: #fff;
+    }
+ }

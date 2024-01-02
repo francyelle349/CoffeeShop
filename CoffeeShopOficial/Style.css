@@ -1,0 +1,756 @@
+:root{
+    --main-color: #f3c283;
+    --black: #17171f;
+    --bg: #000000;
+    --border: .1rem solid rgba(255,255,255,.3)
+
+    /* RGBA (o A é a opacidade da cor, ou seja, é declarado de 0 a 1) */
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box; /*define como a largura e a altura dos elementos são calculadas */
+
+    outline: none; border: none;
+    text-decoration: none; /*Remove sublinhados de links */
+
+    transition: .2s linear;
+} /* vai selecionar todos os elementos e os elementos secundários como um todo */
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+  html {
+    font-size: 62.5%;  /* Define o tamanho da fonte base para 62.5% do tamanho padrão (1rem = 10px) */
+    overflow-x: hidden; /* Esconde a barra de rolagem horizontal */
+    scroll-padding-top: 9rem; /* Define o espaçamento superior ao rolar para 9rem (útil para links ancorados) */
+    scroll-behavior: smooth; /* Adiciona um efeito de rolagem suave */
+}
+/*Vai selecionar somente o elemento html*/
+
+
+html::-webkit-scrollbar {
+    width: .8rem; /* Define a largura da barra de rolagem */
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent; /* Define o plano de fundo da trilha da barra de rolagem como transparente */
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #f3c283; /* Define a cor de fundo do botão da barra de rolagem */
+    border-radius: 5rem; /* Adiciona bordas arredondadas ao botão da barra de rolagem */
+}
+
+body{
+    background: var(--bg);
+}
+section{
+    padding: 2rem;
+}
+/*TITULOS*/
+
+.heading{
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+.heading span{
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+/* BUTTON */
+.btn {
+    margin-top: 10px;  /* Adiciona uma margem superior de 10 pixels */
+    display: inline-block;  /* Define o elemento como um bloco em linha */
+    padding: 7px 30px;  /* Adiciona espaçamento interno de 7 pixels no 
+    topo/fundo e 30 pixels nos lados */
+    font-size: 1.7rem;  /* Define o tamanho da fonte como 1.7 rem */
+    color: #fff;  /* Define a cor do texto como branco */
+    background: var(--main-color);  /* Usa uma variável CSS para definir a cor de fundo */
+    cursor: pointer;  /* Altera o cursor para indicar que é clicável */
+ }
+ 
+ .btn:hover {
+     letter-spacing: .2rem;  /* Adiciona espaçamento entre as letras quando o mouse está sobre o botão */
+     background: #000000;
+ }
+/* HEADER - CABEÇALHO */
+
+.header{
+    background: var(--bg);
+    display: flex;
+    align-items:center;
+    justify-content: space-between; 
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top:0; left:0; right:0;
+    z-index: 1000;
+}
+
+/* acontece que como eu estou referenciando o HEADER primeiro, então a img vai pegar 3% do total da largura relativo do CONTAINER PAI, por isso ficou largo.
+mas se for PX, vai ser só em pixels, então vai ser somente a area da imagem mesmo, só em uma area.
+width: 3%;*/
+
+.header .logo img {
+    width: 50px;
+}
+
+.header .navbar a {
+    margin:0 1rem;
+    font-size: 1.6rem;
+    color: #fff;
+}
+.header .navbar ul{
+    display: flex;
+}
+
+.header .navbar ul li{
+    display: flex;
+}
+.header .navbar a:hover {
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.header .icons div{
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover {
+    color:var(--main-color);
+}
+
+.header .search-form.active{
+    transform: scaleY(1);
+}
+.header .search-form input{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding:1rem;
+    text-transform: none;
+}
+
+.header .search-form label{
+    cursor: pointer;
+    font-size: 2.2rem ;
+    margin-right: 1.5rem;
+    color:var(--black);
+}
+.header .search-form label:hover{
+    color: var(--main-color);
+
+}
+
+.header.cart-item img{
+    width: 100px;
+}
+
+.header .cart-items-container{
+    position: absolute;
+    top:100%; right: -100%;
+    height: calc(100vh - 9.5rem);
+    width: 35rem;
+    background: #fff;
+    padding: 0 1.5rem;
+
+}
+
+.header .cart-items-container.active {
+    right:0;
+}
+
+.header .cart-items-container .cart-item{
+    position: relative;
+    margin: 2rem 0;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header .cart-items-container .cart-item .fa-times {
+    position: absolute;
+    top: 1rem; right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--black);
+}
+
+.header .cart-items-container .cart-item .fa-times:hover {
+
+ color: var(--main-color);
+
+}
+.header .cart-items-container .cart-item img{
+    height: 7rem;
+}
+
+.header .cart-items-container .cart-item .content h3{
+    font-size: 2rem;
+    color: var(--black);
+    padding-bottom: .5rem;
+}
+
+.header .cart-items-container .cart-item .content .price{
+    font-size: 2rem;
+    color: var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.header .cart-items-container .btn{
+    width: 100%;
+    text-align: center;
+}
+
+#menu-btn{
+    display: none;
+}
+
+.header .search-form{
+    position: absolute;
+    top: 115%; right: 7%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+    
+    
+}
+/*HEADER ENDS */
+
+/* HOME STARTS */
+.home {
+    background-position: left;  /* Define a posição do plano de fundo à esquerda */
+    justify-content: center;    /* Centraliza os itens horizontalmente */
+    text-align: center;         /* Centraliza o texto dentro do contêiner */
+    min-height: 100vh;          /* Define a altura mínima como 100% da altura da viewport */
+    display: flex; /* Usa o modelo de layout flexbox */
+    align-items: center;        /* Centraliza os itens verticalmente */
+    background: url(img/barista-5055060_1920.jpg);  /* Define a imagem de fundo */
+    block-size: cover;          /* Usa a propriedade cover para cobrir completamente o contêiner */
+}
+
+.home .content {
+    background: rgba(0, 0, 0, 0.4);   /* Define um fundo com uma cor preta semitransparente */
+    border-radius: 0.9rem;            /* Adiciona bordas arredondadas ao contêiner */
+    padding-top: 50px;                /* Espaçamento superior de 50 pixels */
+    padding-right: 100px;               /* Espaçamento direito de 30 pixels */
+    padding-bottom: 50px;             /* Espaçamento inferior de 50 pixels */
+    padding-left: 100px;                /* Espaçamento esquerdo de 70 pixels */
+    max-width: 70rem;                 /* Define a largura máxima do contêiner como 70 rem */
+}
+
+.home.content p{
+    font-size: 1.5rem;
+}
+
+
+.home .content h3{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: var(--main-color);
+   
+    
+}
+.home .content span{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: #f3c283;
+   
+    
+}
+
+.home .content p{
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding:1rem 0;
+    text-transform:uppercase;
+    color: var(--main-color);
+    
+}
+
+.home .content .p span{
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding:1rem 0;
+    text-transform:uppercase;
+    color: #000000;
+    
+}
+/* HOME ENDS */
+
+
+.review .box-container .box img{
+    width: 10%;
+} 
+
+/*media queries */
+
+.row img{
+    width: 50%;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    background:var(--black);
+    flex-wrap: wrap;
+}
+.about .row .image{
+    flex: 1 1 45rem;
+}
+.about .row img{
+    width: 100%;
+}
+.about .row .content{
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+.about .row .content h3{
+    font-size: 3rem;
+    color: #fff;
+}
+.about .row .content p{
+    font-size: 1.6rem;
+    color: #eee;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+.menu .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap:1.5rem;
+}
+.menu .box-container .box{
+    padding:5rem;
+    text-align:center;
+    border:var(--border);
+
+}
+
+
+
+.box-container .box img {
+    width: 50%;
+}
+.menu .box-container .box h3{
+    color: #fff;
+    font-size: 2rem;
+    padding:1rem 0;
+
+}
+.menu .box-container .box .price{
+    color: #fff;
+    font-size: 2rem;
+    padding: .5rem 0;
+    
+}
+.menu .box-container .box span{
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    
+    
+}
+
+.menu .box-container .box:hover > *{
+    color:#fff;
+}
+.products .box-container .box img{
+    width: 60%;
+    padding-top: 30px;
+}
+.products .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap:1.5rem;
+}
+.products .box-container .box {
+    text-align: center;
+    border: var(--border);
+    padding: 2rem;
+}
+.products .box-container .box .icons a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    border:var(--border);
+    color:#fff;
+    margin: .3rem;
+
+
+}
+.products .box-container .box .icons a:hover{
+    background: var(--main-color);
+}
+.products .box-container .box .icons .image{
+    padding:2.5rem 0;
+}
+.products .box-container .box .icons .image img{
+    height:25rem;
+    
+}
+.products .box-container .box .content h3{
+    color: #fff;
+    padding-top: 30px;
+    font-size:2.5rem;
+}
+.stars ul{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-items: center;
+    margin-left: 11.8rem;
+    
+
+
+}
+.products .box-container .box .content .stars {
+    padding: 1.7rem;
+}
+
+.products .box-container .box .content .stars i{
+    font-size: 1.7rem;
+    color: var(--main-color);
+}
+.products .box-container .box .content .price{
+    color:#fff;
+    font-size: 2.5rem;
+}
+
+.products .box-container .box .content .price span{
+    text-decoration: line-through;
+    font-weight: lighter;
+    font-size: 1.5rem;
+}
+.review .box-container .box img{
+    width: 20%;
+}
+.review .box-container{
+    display: flex;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap:1.5rem;
+}
+.review .box-container .box{
+    border: var(--border);
+    text-align: center;
+    padding:3rem 2rem;
+}
+.review .box-container .box p{
+    font-size:1.5rem;
+    line-height:center;
+    color: #ccc;
+    padding: 2rem 0;
+}
+.review .box-container .box .user{
+    
+    border-radius: 50%;
+    object-fit:cover ;
+}
+.review .box-container .box h3{
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: #fff;
+}
+.review .box-container .box .stars i{
+    
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+.contact .row{
+    display: flex;
+    align-items: center;
+    background:var(--black);
+    flex-wrap: wrap;
+    gap:1rem;
+}
+.contact .row .map{
+    flex:1 1 45rem;
+    width:100%;
+    object-fit: cover;
+}
+.contact .row form{
+    flex:1 1 45rem;
+}
+.contact .row{
+    display: flex;
+    align-items: center;
+    background: var(--black);
+    flex-wrap: wrap;
+    gap:1rem;
+}
+.contact .row .map{
+    flex:1 1 45rem;
+    width:100%;
+    object-fit:cover;
+}
+.contact .row form{
+    flex:1 1 45rem;
+    padding:5rem 2rem;
+    text-align:center;
+}
+.contact .row form h3{
+    text-transform: uppercase;
+    font-size:3.5rem;
+    color:#fff;
+    text-align: center;
+}
+.contact .row form .inputBox{
+    display: flex;
+    align-items:center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background: var(--black);
+    border: var(--border);
+
+}
+.contact .row form .inputBox span{
+    color:#fff;
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+.contact .row form .inputBox input{
+    width:100%;
+    padding: 2rem;
+    font-size:1.7rem;
+    color: #fff;
+    text-transform: none;
+    background: none;
+}
+
+.contact span{
+    display:none;
+    font-size: medium;
+    color: red;
+    
+}
+
+.blogs .box-container .box img{
+    width: 100%;
+}
+
+
+.blogs .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap:1.5rem;
+}
+
+.blogs .box-container .box{
+    border:var(--border);
+}
+
+.blogs .box-container .box .image{
+    height: 25rem;
+    overflow: hidden;
+    width: 100%;
+}
+
+.blogs .box-container .box:hover .image img{
+    transform: scale(0.9); /*dentro de qualquer parte do box a imagem aumenta*/
+}
+.blogs .box-container .box .content{
+    padding:2rem;
+
+}
+.blogs .box-container .box .content .title{
+    font-size: 2.5rem;
+    line-height: 1.5;
+    color:#fff;
+}
+.blogs .box-container .box .content .title:hover{
+    color:var(--main-color);
+}
+.blogs .box-container .box .content span{
+    color:var(--main-color);
+    display: block;
+    padding-top: 1rem;
+    font-size: 2rem;
+
+}
+.blogs .box-container .box .content p{
+   font-size:1.6rem ; 
+   line-height: 1.8;
+   color:#ccc;
+   padding: 1rem;
+}
+
+.footer{
+    background:var(--black);
+    text-align: center;
+}
+.footer .share {
+    padding: 1rem 0;
+
+}
+.footer .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: #fff;
+    border:var(--border);
+    margin:3rem;
+    border-radius: 50%;
+}
+.footer .share a:hover{
+    background-color: var(--main-color);
+}
+.footer .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 1rem;
+}
+.footer .links a{
+    padding: .7rem 2rem;
+    color: #fff;
+    border: var(--border);
+    font-size: 2rem;
+    
+}
+.footer .links a:hover{
+   background: var(--main-color); 
+}
+
+.footer .credit{
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: lighter;
+}
+
+/* como a tela vai se comportar em telas de 900 pxs ou menos */
+@media (max-width: 900px) {
+
+    .home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(img/barista-5055060_1920.jpg) no-repeat;
+    block-size:cover ;
+}
+
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 100%;
+        right:-100%;
+        background: #fff;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+        
+    }
+    
+.header .navbar ul{
+    display: list-item;
+    list-style-type: none;
+}
+
+    section{
+        padding: 2rem;
+    }
+    p{
+        color:#fff;
+    }
+    
+    .header .navbar.active{
+        right: 0;
+    }
+
+    .header .navbar a {
+        color: var(--black);
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+    }
+
+    .header .navbar a {
+            color: var(--black);
+            display: block;
+            margin: 1.5rem;
+            padding: .5rem;
+            font-size: 2rem;
+        }
+
+    .row img{
+        width: 0%;
+    }
+
+    .products .box-container .box img{
+        width: 40%;
+    }
+
+    .blogs .box-container .box img{
+        width: 20%;
+    }
+
+    .blogs .box-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+        gap:1.5rem;
+    }
+
+    .blogs .box-container .box{
+        border:var(--border);
+    }
+
+    .blogs .box-container .box .image{
+        height: 25rem;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .blogs .box-container .box:hover .image img{
+        transform: scale(1.0);
+    }
+    .blogs .box-container .box .content{
+        padding:2rem;
+
+    }
+    .blogs .box-container .box .content .title{
+        font-size: 2.5rem;
+        line-height: 1.5;
+        color:#fff;
+    }
+    .blogs .box-container .box .content .title:hover{
+        color:var(--main-color);
+    }
+
+    .blogs .box-container .box img{
+        width: 100%;
+    }
+    .stars ul{
+        display: flex;
+        list-style-type: none;
+        align-items: center;
+        justify-items: center;
+        margin-left: 20rem;
+        
+
+
+    }
+
+    /* diferente do tutorial, vou utilizar o botao para poder ativar a funcao. inicialmente era somente utilizando o icon, mas não esta dando certo*/
+
+
+
+}

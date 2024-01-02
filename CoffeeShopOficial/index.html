@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+      <link rel="stylesheet" href="Style.css">
+      <script src="script.js"></script> <!-- precisa ser inicializado antes do cód-->
+      <script src="ScriptValidacao.js"></script>
+      
+    <title>Coffee Shop</title>
+  
+</head>
+<body>
+    
+    <!--header section starts-->
+    <header class="header">
+        
+       <div class="logo">
+        <img src="img/coffeeLogo.png" alt="Coffee Shop">
+       </div>
+
+       <nav class="navbar">
+
+         <ul>
+            <li><a href="#home">Início</a> </li>
+            <li></li><a href="#about">Sobre</a> </li>
+            <li>  <a href="#menu">Cardápio</a>  </li>
+            <li> </li><a href="#products">Produtos</a> </li>
+            <li> <a href="#review">Avaliação</a>  </li>
+            <li> </li><a href="#contact">Contato</a>  </li>
+            <li><a href="#blogs">Blogs</a>  </li>
+            
+        </ul>
+       
+       </nav>
+
+       
+
+       <div class="icons">
+       
+        <div class="fas fa-search" id="search-btn" onclick="toggleSearch()"></div>
+
+        <div class="fas fa-shopping-cart" id="cart-btn" onclick="toggleCart()" ></div>
+
+        <div class="fa-solid fa-user-plus" id="user-btn" onclick="togglePage()"></div>
+
+        
+       
+        <div class="fas fa-bars" id="menu-btn" onclick="toggleNavbar()" ></div>
+        
+
+        
+       </div>
+
+ 
+
+       <div class="search-form">
+        <input type="search" id="search-box" placeholder="Pesquise aqui...">
+        <label for="search-box" class="fas fa-search"></label>
+       </div>
+
+     <div class="cart-items-container"> <!-- cart items container begins -->
+        <div class="cart-item">
+            <span class="fas fa-times"></span>
+            
+            <div class="content">
+                <table>
+                    <tr>
+                        <td>
+                            <img src="img/Design sem nome (10).png" alt="">
+                        </td>                    
+                    
+                    </tr>
+                    <tr>
+                        <td><h3>1 Porção de Bolo de Vanilla</h3> </td>
+                        
+                    </tr>
+                    <tr>
+                        <td><div class="price">$05.90</div></td>
+                    </tr>
+                </table>
+            
+              
+
+
+        
+            <span class="fas fa-times"></span>
+                    
+        </div> 
+            
+            <div class="content">  
+                <table>
+                    <tr>
+                        <td><img src="img/Design sem nome (11).png" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td><h3>Café Preto</h3></td>
+                    </tr>
+                    <tr> 
+                        <td><div class="price">$02.90</div> </td>
+    
+                    </tr>
+                </table>  
+            
+       
+            <span class="fas fa-times"></span>
+        
+        
+            
+            <div class="content">
+                <table>
+                    <tr>
+                        <td><img src="img/Design sem nome (15).png" alt=""> </td>
+                    </tr>
+                    <tr>
+                        <td><h3>Latte de Lavanda e Mel</h3> </td>
+                    </tr>
+                    <tr>
+                        <td><div class="price">$09.99</div> </td>
+                    </tr>
+                </table>
+                
+            </div>
+        </div>
+    
+        <!--cart items container ends-->
+       </div>
+
+       <div>
+        <a href="#" class="btn">Finalizar Compra</a>
+       </div>
+
+       
+      
+    </header>
+    <!--header section ends-->
+
+     <!--home section starts-->
+     
+     <section class="home" id="home">
+
+        <div class="content">
+        <h3> Coffee Shop </h3>
+        <p>Melhores momentos com um bom café </p>  
+        
+        </div>
+
+     </section>
+
+     <!--home section ends-->
+
+     <!--about section starts-->
+     <section class="about" id="about">
+        <h1 class="heading">
+            <span>Sobre</span> nós
+        </h1>
+        <div class="row">
+            <div class="image">
+                <img src="img/coffee-Shop.jpg" alt="">
+            </div>
+
+            <div class="content">
+                <p>Somos apaixonados por café e comprometidos em proporcionar uma experiência excepcional a cada cliente que cruza nossa porta.</p>
+                <p>Nossos grãos são cuidadosamente selecionados de fazendas ao redor do mundo, torrados localmente para garantir a frescura e o sabor distintivo que você merece.</p>
+                <a href="#" class="btn">Saiba Mais</a>
+            </div>
+        </div>
+     </section>
+     <!--about section ends-->
+
+     
+    <!--menu section starts-->
+     <section class="menu" id="menu">
+        <h1 class="heading"> Nosso <span>Cardápio</span> </h1>
+
+        <div class="box-container">
+
+          <div class="box">
+            <img src="img/Design sem nome (15).png" alt="">
+            <h3>Latte de Lavanda e Mel</h3>
+            <div class="price">$09.99 <span>20.99</span></div>
+            <a href="#" class="btn">Adicionar ao carrinho</a>
+          </div> 
+          
+          <div class="box">
+            <img src="img/Design sem nome (10).png" alt="">
+            <h3> 1 Porção de Bolo de Vanilla</h3>
+            <div class="price">$05.90 <span>09.99</span></div>
+            <a href="#" class="btn">Adicionar ao carrinho</a>
+          </div>  
+
+          <div class="box">
+            <img src="img/Design sem nome (21).png" alt="">
+            <h3>Cappuccino de Canela </h3>
+            <div class="price">$04.99 <span>10.00</span></div>
+            <a href="#" class="btn">Adicionar ao carrinho</a>
+          </div>  
+
+          <div class="box">
+            <img src="img/Design sem nome (22).png" alt="">
+            <h3>Espresso Duplo Chocolate e Biscoitos Caseiros</h3>
+            <div class="price">$10.99 <span>19.99</span></div>
+            <a href="#" class="btn">Adicionar ao carrinho</a>
+          </div>  
+
+          <div class="box">
+            <img src="img/Design sem nome (11).png" alt="">
+            <h3>Café Preto</h3>
+            <div class="price">$02.90 <span>04.90</span></div>
+            <a href="#" class="btn">Adicionar ao carrinho</a>
+          </div>  
+
+          <div class="box">
+            <img src="img/Design sem nome (24).png" alt="">
+            <h3>Frapuccino Café Gelado</h3>
+            <div class="price">$15.90 <span>19.90</span></div>
+            <a href="#" class="btn">Adicionar ao carrinho</a>
+          </div>  
+        </div>
+        </div>
+     </section>
+
+     <!--menu section ends-->
+
+     <!--products section starts-->
+   <section class="products" id="products">
+        <h1 class="heading">nossos <span>produtos</span></h1>
+        <div class="box-container">
+
+            <div class="box">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="img/products1.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Café Latte</h3>
+                   
+                    <div class="stars">
+                        
+                            <i class="fas fa-star"></i> 
+                            <i class="fas fa-star"></i> 
+                            <i class="fas fa-star"></i> 
+                            <i class="fas fa-star"></i> 
+                            <i class="fas fa-star"></i>
+                        
+                      
+                    </div>
+                    <div class="price">$10.90 <span>20.99</span></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="img/products2.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Café Americano</h3>
+                   
+                    <div class="stars">
+                        
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i>
+                    
+                  
+                </div>
+                    <div class="price">$20.90 <span>30.90</span></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="img/products3.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Café Cold Brew</h3>
+                   
+                    <div class="stars">
+                        
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i>
+                    
+                  
+                </div>
+                    <div class="price">$05.90 <span>10.90</span></div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+     </section>
+     <!--products section ends-->
+
+     <!-- review section starts-->
+     <section class="review" id="review">
+        <h1 class="heading">Avaliação <span>de clientes</span></h1>
+        
+        <div class="box-container">
+            <div class="box">
+            <img src="img/quote1.png" alt="quote">
+                <p>O atendimento é excepcional, a decoração é acolhedora e o latte caramelo  é simplesmente divino. Mal posso esperar para voltar!</p>
+                <img src="img/review.png" alt="" class="user">
+                <h3>Maria</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            
+            </div>
+
+            <div class="box">
+                <img src="img/quote1.png" alt="quote">
+                    <p> A qualidade do café é impressionante, e a equipe é sempre amigável. O ambiente é relaxante, e é o local perfeito para ler um livro ou trabalhar tranquilamente. Altamente recomendado!</p>
+                    <img src="img/review2.png" alt="" class="user">
+                    <h3>Sara Silva</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                
+                </div>
+
+                <div class="box">
+                    <img src="img/quote1.png" alt="quote">
+                        <p> A seleção de bolos e doces combina perfeitamente com o café. Uma verdadeira experiência gourmet.</p>
+                        <img src="img/review3.png" alt="" class="user">
+                        <h3>John deo</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    
+                    </div>
+        </div>
+     </section>
+     <!--review section ends-->
+
+     <!--contact section starts-->
+     <section class="contact" id="contact">
+        <h1 class="heading"><span>fale</span> conosco</h1>
+
+        <div class="row">
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43048.33287315763!2d-73.83911566593626!3d40 70984192230309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNova%20Iorque%2C%20NY%2C%20EUA!5e0!3m2!1spt-PT!2sbr!4v1696735904314!5m2!1spt-PT!2sbr" allowfullscreen="" loading="lazy"></iframe>
+            <form id="form" method="post" action="banco.php">
+
+                <h3>entre em contato</h3>
+                <div class="inputBox">
+                    <span class="fas fa-user"></span>
+                    <input type="text" placeholder="Nome" class="inputs required" oninput="nameValidate()" name="name" >
+                </div>
+                <span class="span-required"> Digite um Nome com mais de 3 caracteres</span>
+
+                <div class="inputBox">
+                    <span class="fas fa-envelope"></span>
+                    <input type="text" placeholder="Email" class="inputs required" oninput="emailValidate()" name="email" >     
+                </div>
+                <span class="span-required"> Digite um Email válido</span>
+
+                <div class="inputBox">
+                    <span class="fas fa-phone"></span>
+                    <input type="text" placeholder="Número" class="inputs required" oninput="numeroValidate()" name="number">
+                       
+                </div>
+                <span class="span-required">Digite um Número válido</span>
+                
+                <input type="submit" value="Fale Conosco" class="btn" >
+
+            </form>
+
+        </div>
+
+
+
+     </section>
+     <!--contact section ends-->
+     <!--blogs section starts-->
+     <section class="blogs" id="blogs">
+        <h1 class="heading">nossos <span>blogs</span></h1>
+
+        <div class="box-container">
+            <div class="box">
+
+                <div class="image">
+                    <img src="img/coffeeImage1.jpg" alt="">
+                </div>
+
+                <div class="content">
+                    <a href="#" class="title">Café e Saúde: Os Benefícios e Mitos por Trás da Bebida</a>
+                    <span>by admin / 21st may, 2021</span>
+                    <p>Descubra os fatos por trás dos benefícios à saúde e os mitos associados ao consumo de café neste blog informativo. Aprenda como essa bebida influencia a sua saúde de maneira equilibrada e responsável. </p>
+                    <a href="#" class="btn">Saiba Mais</a>
+                </div>
+            </div>
+
+
+            <div class="box">
+                <div class="image">
+                    <img src="img/coffee-wheel-1543158_1280.jpg" alt="">
+                </div>
+                <div class="content">
+                    <a href="#" class="title">Café e Bem-Estar: Encontre Equilíbrio e Energia</a>
+                    <span>by admin / 22st may, 2021</span>
+                    <p>Descubra como o café pode fazer parte de um estilo de vida saudável. Explore práticas de bem-estar, receitas saudáveis e estratégias para aproveitar a energia do café de forma consciente.</p>
+                    <a href="#" class="btn">Saiba Mais</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="img/coffeeImage.jpg" alt="">
+                </div>
+                <div class="content">
+                    <a href="#" class="title">Café na Sua Cozinha: Receitas e Dicas de Barista</a>
+                    <span>by admin / 25st may, 2021</span>
+                    <p>Transforme sua cozinha em uma cafeteria de classe mundial com nossas receitas e dicas de barista. Aprenda a preparar cafés especiais e deliciosas sobremesas com café. </p>
+                    <a href="#" class="btn">Saiba Mais</a>
+                </div>
+            </div>
+
+        </div>
+     </section>
+
+     <!--blogs section ends-->
+
+     <!--footer section starts-->
+     <section class="footer">
+        <div class="share">
+            <a href="https://pt-br.facebook.com/StarbucksBrasil/" class="fab fa-facebook-f"></a>
+            <a href="https://twitter.com/Starbucks" class="fab fa-twitter"></a>
+            <a href="https://www.instagram.com/starbucksbrasil/" class="fab fa-instagram"></a>
+            <a href="https://www.linkedin.com/company/starbucks/" class="fab fa-linkedin"></a>
+            
+            
+        </div>
+
+        <div class="links">
+            <a href="#">Início</a>
+            <a href="#">Sobre</a>
+            <a href="#">Cardápio</a>
+            <a href="#">Produtos</a>
+            <a href="#">Contato</a>
+            <a href="#">Blogs</a>
+            
+        </div>
+        <div class="credit"> All Rights Reserved</div>
+     </section>
+     <!--footer section ends-->
+</body>
+
+
+
+
+</html>
