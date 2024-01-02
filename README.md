@@ -1,1 +1,9 @@
-https://www.canva.com/design/DAFzl_EVgOk/je3W87LwgEbXWpuQawjTFg/view?utm_content=DAFzl_EVgOk&utm_campaign=designshare&utm_medium=link&utm_source=editor
+<img src="CoffeeShopOficial\Slide\1.png" alt="Slide" width="1920" height="720">
+<img src="CoffeeShopOficial\Slide\2.png" alt="Slide" width="1920" height="720">
+<img src="CoffeeShopOficial\Slide\3.png" alt="Slide" width="1920" height="720">
+<img src="CoffeeShopOficial\Slide\4.png" alt="Slide" width="1920" height="720">
+<img src="CoffeeShopOficial\Slide\5.png" alt="Slide" width="1920" height="720">
+<img src="CoffeeShopOficial\Slide\6.png" alt="Slide" width="1920" height="720">
+
+
+
