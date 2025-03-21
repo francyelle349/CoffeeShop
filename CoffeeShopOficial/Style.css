@@ -1,5 +1,5 @@
 :root{
-    --main-color: #f3c283;
+    --main-color: #ffb75f;
     --black: #17171f;
     --bg: #000000;
     --border: .1rem solid rgba(255,255,255,.3)
@@ -232,25 +232,27 @@ width: 3%;*/
 
 /* HOME STARTS */
 .home {
-    background-position: left;  /* Define a posição do plano de fundo à esquerda */
+    background-position:center;  /* Define a posição do plano de fundo à esquerda */
     justify-content: center;    /* Centraliza os itens horizontalmente */
     text-align: center;         /* Centraliza o texto dentro do contêiner */
-    min-height: 100vh;          /* Define a altura mínima como 100% da altura da viewport */
+    min-height: 100vh; 
+              /* Define a altura mínima como 100% da altura da viewport */
     display: flex; /* Usa o modelo de layout flexbox */
-    align-items: center;        /* Centraliza os itens verticalmente */
-    background: url(img/barista-5055060_1920.jpg);  /* Define a imagem de fundo */
-    block-size: cover;          /* Usa a propriedade cover para cobrir completamente o contêiner */
+    align-items: center;
+        /* Centraliza os itens verticalmente */
+    object-fit: cover;
+   /* Define a imagem de fundo */
+    block-size: cover;         
+ 
+    height: auto;
+    
 }
 
-.home .content {
-    background: rgba(0, 0, 0, 0.4);   /* Define um fundo com uma cor preta semitransparente */
-    border-radius: 0.9rem;            /* Adiciona bordas arredondadas ao contêiner */
-    padding-top: 50px;                /* Espaçamento superior de 50 pixels */
-    padding-right: 100px;               /* Espaçamento direito de 30 pixels */
-    padding-bottom: 50px;             /* Espaçamento inferior de 50 pixels */
-    padding-left: 100px;                /* Espaçamento esquerdo de 70 pixels */
-    max-width: 70rem;                 /* Define a largura máxima do contêiner como 70 rem */
-}
+.home {
+ 
+    background: url('img/background.jpg') no-repeat center center;
+    background-size: cover;
+  }
 
 .home.content p{
     font-size: 1.5rem;
@@ -260,14 +262,19 @@ width: 3%;*/
 .home .content h3{
     font-size: 6rem;
     text-transform: uppercase;
-    color: var(--main-color);
+    color:#ffffff;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding-right: 800px;
+    padding-top: 90px;
    
     
 }
 .home .content span{
     font-size: 6rem;
     text-transform: uppercase;
-    color: #f3c283;
+    color: #ccc;
    
     
 }
@@ -277,8 +284,13 @@ width: 3%;*/
     font-weight: lighter;
     line-height: 1.8;
     padding:1rem 0;
-    text-transform:uppercase;
-    color: var(--main-color);
+
+    color: #ffffff;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding-right: 800px;
+   
     
 }
 
